@@ -13,3 +13,6 @@ find folder/ -type f | xargs -P 16 -n 9000 \
 # this script preserves the aspect ratio of images by adding white to the edges
 # it can also be modified to include black by adding
 # a "-background black" tag (the default is white) at the end
+
+# To Resize to another dimension besides 512x512, you can simply 
+# change those numbers to the dimensions required (i.e. 256x256)
