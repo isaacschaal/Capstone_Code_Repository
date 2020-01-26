@@ -2,7 +2,7 @@
 # It is very important that each file is exactly the same, as any deviations
 # will cause StyleGAN to crash
 
-# This script is based on a script from Gwern’s StyleGAN Blog post, which can be found at
+# This script is a modified version of a script from Gwern’s StyleGAN Blog post, which can be found at
 # https://www.gwern.net/Faces
 
 # Replace "folder" with the actual folder name where the files are stored
