@@ -1,5 +1,6 @@
 # Don't track content of these folders
-Data_Tools/selfies
+Data_Tools/selfies/
+Data_Tools/env/
 
 # Local files
 *.DS_Store
