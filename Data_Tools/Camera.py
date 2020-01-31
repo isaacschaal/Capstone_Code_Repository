@@ -6,12 +6,13 @@ import re
 
 file_list = os.listdir(path='./selfies')
 num_list = [re.findall(r'\d+', string) for string in file_list]
-max_dig = max(num_list)
-new_start = int(max_dig[0]) + 1
+one_list = [int(num[0]) for num in num_list if len(num) >0]
+max_dig = max(one_list)
+new_start = max_dig + 1
 
 # give me time to switch desktops to
 # an empty with just the background image
-time.sleep(5)
+time.sleep(3)
 
 #start the feed from the camera
 cap = cv2.VideoCapture(0)
@@ -19,9 +20,9 @@ cap = cv2.VideoCapture(0)
 # take ten pictures, which is aligned
 # with my miror routine to take 10
 # pictures at different angles
-for i in range(10):
+for i in range(13):
     # pause so that I can adjust the angle
-    time.sleep(3)
+    time.sleep(2)
 
     # get a still from the camera
     _, frame = cap.read()
