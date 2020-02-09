@@ -1,6 +1,10 @@
 # Don't track content of these folders
 Data_Tools/selfies/
 Data_Tools/env/
+Data_Tools/artists_scraped/
 
 # Local files
 *.DS_Store
+
+# Don't track artist list
+*.csv
