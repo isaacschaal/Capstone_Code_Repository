@@ -20,7 +20,7 @@ cap = cv2.VideoCapture(0)
 # take ten pictures, which is aligned
 # with my miror routine to take 10
 # pictures at different angles
-for i in range(13):
+for i in range(7):
     # pause so that I can adjust the angle
     time.sleep(2)
 
