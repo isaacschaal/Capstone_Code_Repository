@@ -2,6 +2,8 @@
 Data_Tools/selfies/
 Data_Tools/env/
 Data_Tools/artists_scraped/
+Data_Tools/artists_*
+image_processing
 
 # Local files
 *.DS_Store
