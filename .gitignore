@@ -4,9 +4,20 @@ Data_Tools/env/
 Data_Tools/artists_scraped/
 Data_Tools/artists_*
 image_processing
+Autonomous_Artist/venv
+
+# dont track personal testing
+Autonomous_Artist/*_test
+*_test.py
 
 # Local files
 *.DS_Store
+__pycache__
 
 # Don't track artist list
 *.csv
+
+# Don't track env, requirement, dbs
+.env
+requirements.txt
+*.sqlite
