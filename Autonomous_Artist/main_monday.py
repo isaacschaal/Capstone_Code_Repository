@@ -15,14 +15,15 @@ def main(week):
     process = subprocess.run(commands,
                             stdout=subprocess.PIPE,
                             universal_newlines=True)
-    #process
+                            
+    if process.returncode == 0:
 
-    # 2: Tweet new images
-    commands = ['python3', 'tweet_new_imgs_monday.py','--week',str(week)]
-    process = subprocess.run(commands,
-                            stdout=subprocess.PIPE,
-                            universal_newlines=True)
-    #process
+        # 2: Tweet new images
+        commands = ['python3', 'tweet_new_imgs_monday.py','--week',str(week)]
+        process = subprocess.run(commands,
+                                stdout=subprocess.PIPE,
+                                universal_newlines=True)
+        #process
 
 
 if __name__ == '__main__':

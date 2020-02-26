@@ -19,5 +19,14 @@ __pycache__
 
 # Don't track env, requirement, dbs
 .env
+.env*
 requirements.txt
 *.sqlite
+
+# dont track smart contract files
+Autonomous_Artist/*/build/
+Autonomous_Artist/*/flattened*
+Autonomous_Artist/*/node_modules/
+Autonomous_Artist/*/metadata_test
+Autonomous_Artist/metadata_hosting
+Autonomous_Artist/*/unused
