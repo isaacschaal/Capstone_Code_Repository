@@ -12,16 +12,27 @@ def main(week):
     process = subprocess.run(commands,
                             stdout=subprocess.PIPE,
                             universal_newlines=True)
-    #process
+    if process.returncode == 0:
 
-    # 2: Create auction
+        # 2: Mint token and add metadata
+        commands = ['python3', 'mint_friday.py','--week',str(week)]
+        process = subprocess.run(commands,
+                                stdout=subprocess.PIPE,
+                                universal_newlines=True)
+        #process
 
-    # 3: Tweet auction
-    commands = ['python3', 'tweet_auction_friday.py','--week',str(week)]
-    process = subprocess.run(commands,
-                            stdout=subprocess.PIPE,
-                            universal_newlines=True)
-    #process
+        # 3: Create auction
+
+        # 4: Tweet auction
+        # commands = ['python3', 'tweet_auction_friday.py','--week',str(week)]
+        # process = subprocess.run(commands,
+        #                         stdout=subprocess.PIPE,
+        #                         universal_newlines=True)
+        # #process
+    else:
+        print (process)
+
+
 
 if __name__ == '__main__':
     args = parser.parse_args()
