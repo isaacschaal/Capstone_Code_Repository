@@ -35,11 +35,11 @@ def main(week):
       "attributes": [
         {
           "trait_type": "size",
-          "value": "512x512"
+          "value": "1024x1024"
         },
         {
           "trait_type": "format",
-          "value": ".jpg"
+          "value": ".png"
         }
       ]
     }

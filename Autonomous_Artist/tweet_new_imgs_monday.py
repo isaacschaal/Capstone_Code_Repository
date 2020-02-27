@@ -22,8 +22,8 @@ t = Twython(app_key=TWITTER_APP_KEY,
 
 def tweet_text(piece_name):
     # Return the text for the tweet
-    #return "%s. Original artwork created by Coral, and Autonomous AI Artist" % piece_name
-    return "%s. Testing - Credit Agnes Martin" % piece_name
+    #return "%s. Original artwork created by Toro, and Autonomous AI Artist" % piece_name
+    return "%s. Testing - FFHQ" % piece_name
 
 def tweet_img(piece_name,img_path):
     i = 0

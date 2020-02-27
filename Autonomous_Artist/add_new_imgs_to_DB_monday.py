@@ -9,7 +9,7 @@ parser.add_argument("--week", type=str, help="The number of the week")
 def main(week):
     img_folder_path = "img_folders/week_"+str(week)+"/"
     img_list = os.listdir(img_folder_path)
-    img_list = [img for img in img_list if img[-4:]==".jpg"]
+    img_list = [img for img in img_list if img[-4:]==".png"]
 
     for i in range(len(img_list)):
         session = Session()
