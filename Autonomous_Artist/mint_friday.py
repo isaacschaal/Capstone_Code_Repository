@@ -56,6 +56,13 @@ def main(week):
     stdout = process.stdout
     token_id = int(stdout.split("Token ID:",1)[1].strip())
 
+    # add token_id to DB
+    session = Session()
+    u = session.query(Artwork).get(db_id)
+    u.tokenID = token_id
+    session.commit()
+    session.close()
+
     # save the metadata to the repo
     f = open("./metadata_hosting/"+str(token_id),"w")
     f.write( json.dumps(metadata) )

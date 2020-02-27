@@ -17,10 +17,11 @@ __pycache__
 # Don't track artist list
 *.csv
 
-# Don't track env, requirement, dbs
+# Don't track env, requirement, dbs, package-lock
 .env
 .env*
 *.sqlite
+*-lock.json
 
 # dont track smart contract files
 Autonomous_Artist/*/build/

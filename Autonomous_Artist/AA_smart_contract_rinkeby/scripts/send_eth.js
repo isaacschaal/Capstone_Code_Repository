@@ -1,11 +1,7 @@
 const HDWalletProvider = require("truffle-hdwallet-provider")
 const web3 = require('web3')
 const axios = require('axios')
-const ansi = require('ansicolor').nice
-var BigNumber = require('bignumber.js');
-
-//const EthereumTx = require('ethereumjs-tx')
-//const log = require('ololog').configure({ time: true }) // get rid of ololog
+//const ansi = require('ansicolor').nice
 
 const MNEMONIC = process.env.MNEMONIC
 const INFURA_KEY = process.env.INFURA_KEY
@@ -36,11 +32,11 @@ const getCurrentGasPrices = async () => {
   }
 
   console.log("\r\n")
-  console.log (`Current ETH Gas Prices (in GWEI):`.cyan)
+  console.log (`Current ETH Gas Prices (in GWEI):`)
   console.log("\r\n")
-  console.log(`Low: ${prices.low} (transaction completes in < 30 minutes)`.green)
-  console.log(`Standard: ${prices.medium} (transaction completes in < 5 minutes)`.yellow)
-  console.log(`Fast: ${prices.high} (transaction completes in < 2 minutes)`.red)
+  console.log(`Low: ${prices.low} (transaction completes in < 30 minutes)`)
+  console.log(`Standard: ${prices.medium} (transaction completes in < 5 minutes)`)
+  console.log(`Fast: ${prices.high} (transaction completes in < 2 minutes)`)
   console.log("\r\n")
 
   return prices
@@ -71,11 +67,11 @@ const main = async () => {
     // convert it to eth
     let myBalance = web3Instance.utils.fromWei(myBalanceWei, 'ether')
 
-    console.log(`Your wallet balance is currently ${myBalance} ETH`.green)
+    console.log(`Your wallet balance is currently ${myBalance} ETH`)
 
     // get a nonce
     let nonce = await web3Instance.eth.getTransactionCount(OWNER_ADDRESS)
-    console.log(`The outgoing transaction count for your wallet address is: ${nonce}`.magenta)
+    console.log(`The outgoing transaction count for your wallet address is: ${nonce}`)
 
     // get gas prices
     let gasPrices = await getCurrentGasPrices()
@@ -96,7 +92,7 @@ const main = async () => {
       "from": OWNER_ADDRESS,
       "value": web3Instance.utils.toHex( web3Instance.utils.toWei(amountToSend, 'ether') ),
       "gas": 21000,
-      "gasPrice": gasPrices.low * 1000000000, // converts the gwei price to wei
+      "gasPrice": gasPrices.medium * 1000000000, // converts the gwei price to wei
       "nonce": nonce,
       "chainId": 4 // EIP 155 chainId - mainnet: 1, rinkeby: 4
     }

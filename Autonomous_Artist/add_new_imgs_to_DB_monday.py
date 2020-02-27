@@ -18,8 +18,11 @@ def main(week):
                         name = "Unititled (" + str(week)+"-"+str(i+1)+")",
                         path = img_folder_path +img_list[i],
                         twitter_id_str = "_",
+                        favorites = "_",
+                        RTs = "_",
                         winner= False,
                         hosting_url = "_",
+                        tokenID = "_",
                         auction_link = "_"))
         session.commit()
         session.close()

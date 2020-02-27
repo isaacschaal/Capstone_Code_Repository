@@ -83,6 +83,15 @@ def main(week):
     else:
         winner = max_favorites_keys[0]
 
+    # update the db with the favs and RTs
+    for id in ids_list:
+        session = Session()
+        u = session.query(Artwork).get(id)
+        u.favorites = favorites_dic[id]
+        u.RTs = RTs_dic[id]
+        session.commit()
+        session.close()
+
     # update the db with the winner
     session = Session()
     u = session.query(Artwork).get(winner)

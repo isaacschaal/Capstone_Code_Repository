@@ -17,8 +17,11 @@ class Artwork(Base):
     name = Column(String)
     path = Column(String)
     twitter_id_str = Column(String)
+    favorites = Column(Integer)
+    RTs = Column(Integer)
     winner = Column( Boolean)
     hosting_url = Column(String)
+    tokenID = Column(Integer)
     auction_link = Column(String)
 
 Base.metadata.create_all(engine)

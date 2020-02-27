@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@0x/subproviders": "^2.1.4",
+    "argparse": "^1.0.10",
     "opensea-js": "latest",
     "openzeppelin-solidity": "^2.1.3",
     "truffle": "^5.1.14",

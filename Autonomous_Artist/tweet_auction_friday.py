@@ -41,9 +41,7 @@ def main(week):
     piece_name, auction_link = session.query(Artwork.name,
                                             Artwork.auction_link).\
                                             filter_by(week = week, winner = True).first()
-    # piece_name = session.query(Artwork.name).\
-    #                                         filter_by(week = week, winner = True).first()
-    #auction_link = "some_link"
+
     session.close()
 
     result = auction_tweet(piece_name,auction_link)
