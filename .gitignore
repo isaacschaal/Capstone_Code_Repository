@@ -22,6 +22,7 @@ __pycache__
 .env*
 *.sqlite
 *-lock.json
+.python-version
 
 # dont track smart contract files
 Autonomous_Artist/*/build/

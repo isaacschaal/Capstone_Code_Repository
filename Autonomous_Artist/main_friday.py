@@ -1,12 +1,13 @@
 import argparse
 import subprocess
 from create_db import Artwork, Session
+from datetime import date
 
 
 
 # Parse Args
 parser = argparse.ArgumentParser()
-parser.add_argument("--week", type=str, help="The number of the week")
+parser.add_argument("--d", type=str, help="The date")
 
 def main(week):
     # 1: Choose Winner
@@ -66,5 +67,12 @@ def main(week):
 
 if __name__ == '__main__':
     args = parser.parse_args()
-    week = args.week
-    main(week)
+    d = args.d
+    # base date
+    d0 = date(2020, 2, 28)
+    # current date
+    d1 = d.split("-")
+    d1 = date(int(d1[0]),int(d1[1]),int(d1[2]))
+    delta = d1 - d0
+    # for daily minting, the main_friday will be +1
+    main(delta.days +1)

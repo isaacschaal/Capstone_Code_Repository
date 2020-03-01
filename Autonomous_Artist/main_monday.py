@@ -1,10 +1,11 @@
 import argparse
 import subprocess
+from datetime import date
 
 
 # Parse Args
 parser = argparse.ArgumentParser()
-parser.add_argument("--week", type=str, help="The number of the week")
+parser.add_argument("--d", type=str, help="The date")
 
 def main(week):
     # 1: Generate new images
@@ -45,5 +46,11 @@ def main(week):
 
 if __name__ == '__main__':
     args = parser.parse_args()
-    week = args.week
-    main(week)
+    d = args.d
+    # base date
+    d0 = date(2020, 2, 29)
+    # current date
+    d1 = d.split("-")
+    d1 = date(int(d1[0]),int(d1[1]),int(d1[2]))
+    delta = d1 - d0
+    main(delta.days)
