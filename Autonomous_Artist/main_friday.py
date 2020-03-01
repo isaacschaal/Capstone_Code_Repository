@@ -69,10 +69,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
     d = args.d
     # base date
-    d0 = date(2020, 2, 28)
+    d0 = date(2020, 2, 27)
     # current date
     d1 = d.split("-")
     d1 = date(int(d1[0]),int(d1[1]),int(d1[2]))
     delta = d1 - d0
     # for daily minting, the main_friday will be +1
-    main(delta.days +1)
+    main(delta.days -1)
