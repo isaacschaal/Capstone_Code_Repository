@@ -369,7 +369,7 @@ def main(week):
         ('g_synthesis', G_synthesis())
     ]))
 
-    if 1:
+    if 0:
         # this can be run to get the weights, but you need the reference implementation and weights
 
         dnnlib.tflib.init_tf()
