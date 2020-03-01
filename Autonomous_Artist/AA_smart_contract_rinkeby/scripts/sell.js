@@ -83,7 +83,7 @@ async function main() {
     console.log("English auctioning an item in DAI...")
     const wethAddress = NETWORK == 'mainnet' ? '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2' : "0xc778417e063141139fce010982780140aa0cd5ab"
     // auction for one day ( I'll change to one week from one hour)
-    const expirationTime = Math.round(Date.now() / 1000 + 60 * 60 * 1)
+    const expirationTime = Math.round(Date.now() / 1000 + 60 * 60 * 24)
     const englishAuctionSellOrder = await seaport.createSellOrder({
         tokenId: String(args['id']),
         tokenAddress: NFT_CONTRACT_ADDRESS,
