@@ -38,7 +38,6 @@ def main(week):
 
     # 4: Take inventory of ETH and make appropriate sales if needed
     # possibly split this into two functions and do the logic in python ?
-    # 2: Add new images to DB
     commands = ['node', 'AA_smart_contract_rinkeby/scripts/send_eth.js']
     process = subprocess.run(commands,
                             stdout=subprocess.PIPE,
