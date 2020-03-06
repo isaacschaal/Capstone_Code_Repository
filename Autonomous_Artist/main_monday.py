@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import argparse
 import subprocess
 from datetime import date
@@ -48,8 +49,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
     d = args.d
     # base date
-    d0 = date(2020, 2, 27)
+    d0 = date(2020, 2, 29)
     # current date
+    d = d[1:-1]
     d1 = d.split("-")
     d1 = date(int(d1[0]),int(d1[1]),int(d1[2]))
     delta = d1 - d0
