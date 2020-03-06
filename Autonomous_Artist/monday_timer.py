@@ -3,7 +3,7 @@ import time
 import subprocess
 
 def job():
-    commands = ['nohup','python3', 'time_test.py']
+    commands = ['nohup','python3', 'time_print.py']
     process = subprocess.run(commands,
                             stdout=subprocess.PIPE,
                             universal_newlines=True)
