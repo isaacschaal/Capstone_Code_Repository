@@ -48,7 +48,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     d = args.d
     # base date
-    d0 = date(2020, 2, 29)
+    d0 = date(2020, 3, 4)
     # current date
     d = d[1:-1]
     d1 = d.split("-")
