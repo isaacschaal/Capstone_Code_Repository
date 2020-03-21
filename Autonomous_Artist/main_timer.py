@@ -1,6 +1,7 @@
 import schedule
 import time
 import subprocess
+from datetime import datetime
 
 def main_monday():
     commands = ['nohup','python3', 'main_monday.py', '--d', str(datetime.today().strftime('%Y-%m-%d'))]
@@ -17,8 +18,8 @@ def main_friday():
     print (process.stdout)
 
 
-schedule.every().day.at("02:45").do(main_monday)
-schedule.every().day.at("03:15").do(main_friday)
+schedule.every().day.at("09:00").do(main_monday)
+schedule.every().day.at("07:00").do(main_friday)
 
 
 while True:
