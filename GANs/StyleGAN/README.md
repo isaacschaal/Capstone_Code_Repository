@@ -14,7 +14,7 @@ These were recommended from Gwern's StyleGAN tutorial https://www.gwern.net/Face
   `# Added the below line on reccomendation from Gwern
     print(image_filenames[order[idx]])`
 
-2. I additionally added a patch based on one presented by Gwern (attributed to 'nsheppard', though without a link).
+2. I additionally added a patch based on one presented by Gwern (attributed to 'nsheppard', though without a link). This patch allowed the network to run from the latest snapshot, instead of having to specify the snapshot.
 
   I added the below code starting on line 122 of `training/misc.py`
 
@@ -39,10 +39,10 @@ These were recommended from Gwern's StyleGAN tutorial https://www.gwern.net/Face
             D = tflib.Network('D', num_channels=training_set.shape[0], resolution=training_set.shape[1], label_size=training_set.label_size, **D_args)
             Gs = G.clone('Gs')`
 
-3.
+3. Finally, I commented out a line in the training loop that ran the FID metric at each iteration, to save training time (and only ran it on the snapshots that I chose after training was done)
 
+  I commented out this code on line 285 of `training/training_loop.py`
 
-
-
+    `#metrics.run(pkl, run_dir=submit_config.run_dir, num_gpus=submit_config.num_gpus, tf_config=tf_config)`
 
 ## Main Parameters
