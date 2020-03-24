@@ -6,34 +6,24 @@ Data_Tools/artists_*
 image_processing
 Autonomous_Artist/venv
 
-# dont track personal testing
-Autonomous_Artist/*_test
-*_test.py
 
-# Local files
-*.DS_Store
-__pycache__
+# Don't track env
+.env
+.env*
+
+
+# Don't track images or movies
+*.jpg
+*.png
+*.mp4
 
 # Don't track artist list
 *.csv
 
-# Don't track env, requirement, dbs, package-lock
-.env
-.env*
-*.sqlite
-*-lock.json
-.python-version
+# Don't track local files
+*.DS_Store
+__pycache__
+.ipynb_*
 
-# dont track smart contract files
-Autonomous_Artist/*/build/
-Autonomous_Artist/*/flattened*
-Autonomous_Artist/*/node_modules/
-Autonomous_Artist/*/metadata_test
-Autonomous_Artist/metadata_hosting
-Autonomous_Artist/*/unused
-
-# dont track pkls or imgs
-*.pkl
-*.pt
-*.jpg
-*.png
+# Don't track files folder
+files/
