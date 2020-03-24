@@ -28,16 +28,16 @@ These were recommended from Gwern's StyleGAN tutorial https://www.gwern.net/Face
 
   And I added the below code starting on line 159 of `training/training_loop.py`
 
-  `if resume_run_id == 'latest':
-      try:
-          network_pkl, resume_kimg = misc.locate_latest_pkl()
-          print('Loading networks from "%s"...' % network_pkl)
-          G, D, Gs = misc.load_pkl(network_pkl)
-      except:
-          print('Constructing networks...')
-          G = tflib.Network('G', num_channels=training_set.shape[0], resolution=training_set.shape[1], label_size=training_set.label_size, **G_args)
-          D = tflib.Network('D', num_channels=training_set.shape[0], resolution=training_set.shape[1], label_size=training_set.label_size, **D_args)
-          Gs = G.clone('Gs')`
+    `if resume_run_id == 'latest':
+        try:
+            network_pkl, resume_kimg = misc.locate_latest_pkl()
+            print('Loading networks from "%s"...' % network_pkl)
+            G, D, Gs = misc.load_pkl(network_pkl)
+        except:
+            print('Constructing networks...')
+            G = tflib.Network('G', num_channels=training_set.shape[0], resolution=training_set.shape[1], label_size=training_set.label_size, **G_args)
+            D = tflib.Network('D', num_channels=training_set.shape[0], resolution=training_set.shape[1], label_size=training_set.label_size, **D_args)
+            Gs = G.clone('Gs')`
 
 3.
 
