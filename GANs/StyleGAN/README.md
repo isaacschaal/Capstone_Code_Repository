@@ -44,5 +44,3 @@ These were recommended from Gwern's StyleGAN tutorial https://www.gwern.net/Face
   I commented out this code on line 285 of `training/training_loop.py`
 
     `#metrics.run(pkl, run_dir=submit_config.run_dir, num_gpus=submit_config.num_gpus, tf_config=tf_config)`
-
-## Main Parameters
