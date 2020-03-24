@@ -1,15 +1,7 @@
-# Don't track content of these folders
-Data_Tools/selfies/
-Data_Tools/env/
-Data_Tools/artists_scraped/
-Data_Tools/artists_*
-image_processing
-Autonomous_Artist/venv
-
-
 # Don't track env
 .env
 .env*
+env
 
 
 # Don't track images or movies

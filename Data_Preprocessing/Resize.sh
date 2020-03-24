@@ -5,6 +5,8 @@
 # This script is a modified version of a script from Gwern’s StyleGAN Blog post, which can be found at
 # https://www.gwern.net/Faces
 
+########################
+
 # Replace "folder" with the actual folder name where the files are stored
 
 find folder/ -type f | xargs -P 16 -n 9000 \
