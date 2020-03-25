@@ -16,5 +16,8 @@ find folder/ -type f | xargs -P 16 -n 9000 \
 # it can also be modified to include black by adding
 # a "-background black" tag (the default is white) at the end
 
+# the \> flag means that it will only shrink but not expand images, 
+# so images smaller than the desired size will have a background filled in
+
 # To Resize to another dimension besides 512x512, you can simply
 # change those numbers to the dimensions required (i.e. 256x256)
